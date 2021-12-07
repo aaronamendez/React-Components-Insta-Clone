@@ -6,6 +6,7 @@ import PostHeader from "./PostHeader";
 const Post = (props) => {
 	// 🔥 Make sure the parent of Post is passing the right props!
 	const { post, likePost } = props;
+	// console.log(post.comments);
 
 	return (
 		<div className="post-border">
@@ -19,7 +20,7 @@ const Post = (props) => {
 				numberOfLikes={post.likes}
 			/>
 			{/* Comments also wants its props! */}
-			<Comments />
+			<Comments comments={post.comments} />
 		</div>
 	);
 };
